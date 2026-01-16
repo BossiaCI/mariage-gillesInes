@@ -43,7 +43,7 @@ const InvitationManager = () => {
   // Message par défaut pour les invitations
   const defaultMessage = `🌺 *Invitation au Mariage de Kossonou Gilles Cédric & Joelle Inès* 🌺
 
-Cher(e) {nom},
+Cher(e) {nom} {prenom},
 
 C'est avec une immense joie que nous vous invitons à célébrer notre union !
 
@@ -381,7 +381,7 @@ Kossonou Gilles Cédric & Joelle Inès 💕`;
                   id="telephone"
                   value={formData.telephone}
                   onChange={(e) => setFormData({...formData, telephone: e.target.value})}
-                  placeholder="+225 07 12 34 56 78"
+                  placeholder="+225 0X XX XX XX XX"
                 />
               </div>
 

@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Thème Chic Balnéaire Assinie - Design System */
+
+@layer base {
+  :root {
+    /* Couleurs Thème Balnéaire Assinie */
+    --background: 0 0% 100%;
+    --foreground: 30 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 15% 15%;
+
+    /* Couleurs principales - Sable et Or */
+    --primary: 35 45% 25%; /* Brun sable foncé */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 45 60% 85%; /* Sable clair */
+    --primary-glow: 50 80% 70%; /* Or lumineux */
+
+    --secondary: 45 25% 92%; /* Blanc sable */
+    --secondary-foreground: 30 15% 15%;
+
+    --muted: 45 15% 95%;
+    --muted-foreground: 30 10% 45%;
+
+    --accent: 50 70% 60%; /* Or élégant */
+    --accent-foreground: 30 15% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 20% 88%;
+    --input: 45 20% 88%;
+    --ring: 35 45% 25%;
+
+    --radius: 0.75rem;
+
+    /* Couleurs spécifiques au thème */
+    --ocean: 195 85% 65%; /* Bleu océan */
+    --sand: 45 60% 85%; /* Sable doré */
+    --palm: 120 40% 30%; /* Vert palmier */
+    --sunset: 25 85% 70%; /* Orange coucher de soleil */
+
+    /* Gradients balnéaires */
+    --gradient-ocean: linear-gradient(135deg, hsl(195 85% 75%), hsl(195 85% 55%));
+    --gradient-sand: linear-gradient(135deg, hsl(45 60% 90%), hsl(45 60% 80%));
+    --gradient-sunset: linear-gradient(135deg, hsl(25 85% 75%), hsl(50 70% 65%));
+    --gradient-elegant: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--accent)));
+
+    /* Ombres élégantes */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.15);
+    --shadow-elegant: 0 10px 40px -10px hsl(var(--accent) / 0.25);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Mode sombre adapté au thème balnéaire */
+    --background: 30 15% 8%;
+    --foreground: 45 25% 92%;
+
+    --card: 30 15% 10%;
+    --card-foreground: 45 25% 92%;
+
+    --popover: 30 15% 10%;
+    --popover-foreground: 45 25% 92%;
+
+    --primary: 50 70% 60%;
+    --primary-foreground: 30 15% 8%;
+
+    --secondary: 30 15% 15%;
+    --secondary-foreground: 45 25% 92%;
+
+    --muted: 30 15% 15%;
+    --muted-foreground: 45 15% 65%;
+
+    --accent: 50 70% 60%;
+    --accent-foreground: 30 15% 8%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 45 25% 92%;
+
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 50 70% 60%;
+    
+    --sidebar-background: 30 15% 8%;
+    --sidebar-foreground: 45 25% 92%;
+    --sidebar-primary: 50 70% 60%;
+    --sidebar-primary-foreground: 30 15% 8%;
+    --sidebar-accent: 30 15% 15%;
+    --sidebar-accent-foreground: 45 25% 92%;
+    --sidebar-border: 30 15% 20%;
+    --sidebar-ring: 50 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Typographies thème mariage */
+  .font-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+  }
+
+  .font-elegant {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+  }
+
+  .font-body {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  /* Composants spécifiques au thème balnéaire */
+  .beach-gradient {
+    background: var(--gradient-ocean);
+  }
+
+  .sand-gradient {
+    background: var(--gradient-sand);
+  }
+
+  .sunset-gradient {
+    background: var(--gradient-sunset);
+  }
+
+  .elegant-gradient {
+    background: var(--gradient-elegant);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  /* Styles pour les sections de mariage */
+  .wedding-section {
+    @apply py-16 px-4;
+  }
+
+  .wedding-container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .wedding-title {
+    @apply font-title text-4xl md:text-5xl lg:text-6xl text-center mb-8;
+  }
+
+  .wedding-subtitle {
+    @apply font-elegant text-xl md:text-2xl text-center mb-6;
+  }
+
+  .wedding-text {
+    @apply font-body text-base md:text-lg leading-relaxed;
+  }
+}

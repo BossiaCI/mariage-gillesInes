@@ -42,9 +42,13 @@ const Lieux = () => {
           <div className="max-w-4xl mx-auto mb-12">
             <Card className="shadow-elegant bg-white/80 backdrop-blur-sm">
               <CardContent className="p-8 text-center">
-                <div className="w-full h-64 bg-cover bg-center rounded-2xl mb-6" style={{
-                backgroundImage: `url('${lieuxImageUrl}')`
-              }} />
+                <div className="w-full rounded-2xl mb-8 overflow-hidden">
+                  <img
+                    src={lieuxImageUrl}
+                    alt="Couple"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
                 <p className="wedding-text text-lg text-muted-foreground mb-4">
                   Assinie est située à environ 100 km d'Abidjan.
                 </p>

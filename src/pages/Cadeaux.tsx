@@ -42,13 +42,13 @@ const Cadeaux = () => {
             {/* Main Message */}
             <Card className="shadow-elegant bg-white/80 backdrop-blur-sm mb-12">
               <CardContent className="p-12 text-center">
-                <div 
-                  className="w-full h-64 bg-cover bg-center rounded-2xl mb-8"
-                  style={{
-                    backgroundImage: `url('${cadeauxImageUrl}')`
-                  }}
-                />
-                
+                <div className="w-full rounded-2xl mb-8 overflow-hidden">
+                  <img
+                    src={cadeauxImageUrl}
+                    alt="Couple"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
                 <div className="flex items-center justify-center mb-8">
                   <Heart className="text-accent" size={32} />
                 </div>

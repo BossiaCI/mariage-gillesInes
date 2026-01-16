@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Phone, ArrowLeft, MessageCircle, Mail, MapPin } from "lucide-react";
+import { Phone, ArrowLeft, MessageCircle, Mail, MapPin, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import SimpleNavigation from "@/components/SimpleNavigation";
 import { useContactPhotos } from "@/hooks/useWeddingPhotos";
@@ -44,9 +44,16 @@ const Contact = () => {
             {/* Main Contact Card */}
             <Card className="shadow-elegant bg-white/80 backdrop-blur-sm mb-12">
               <CardHeader className="text-center">
-                <div className="w-full h-48 bg-cover bg-center rounded-2xl mb-6" style={{
-                backgroundImage: `url('${contactImageUrl}')`
-              }} />
+              <div className="w-full rounded-2xl mb-8 overflow-hidden">
+                  <img
+                    src={contactImageUrl}
+                    alt="Couple"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+                <div className="flex items-center justify-center mb-8">
+                  <Heart className="text-accent" size={32} />
+                </div>
                 <CardTitle className="font-title text-2xl text-primary">
                   Nous Contacter
                 </CardTitle>

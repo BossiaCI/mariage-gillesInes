@@ -144,9 +144,14 @@ const RSVP = () => {
           <div className="max-w-2xl mx-auto">
             <Card className="shadow-elegant bg-white/80 backdrop-blur-sm">
               <CardHeader className="text-center">
-                <div className="w-full h-48 bg-cover bg-center rounded-2xl mb-6" style={{
-                backgroundImage: `url('${backgroundImageUrl}')`
-              }} />
+              <div className="w-full rounded-2xl mb-8 overflow-hidden">
+                  <img
+                    src={backgroundImageUrl}
+                    alt="Couple"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              
                 <CardTitle className="font-title text-2xl text-primary">
                   Formulaire de Confirmation
                 </CardTitle>

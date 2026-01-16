@@ -43,7 +43,7 @@ const InvitationManager = () => {
   // Message par défaut pour les invitations
   const defaultMessage = `🌺 *Invitation au Mariage de Kossonou Gilles Cédric & Joelle Inès* 🌺
 
-Cher(e) {nom} {prenom},
+Cher(e) {nom},
 
 C'est avec une immense joie que nous vous invitons à célébrer notre union !
 

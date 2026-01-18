@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Calendar, MapPin, Users, Camera, Gift, Phone, Info } from "lucide-react";
+import { Heart, Calendar, MapPin, Users, Camera, Gift, Phone, Info, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { usePageTracking } from "@/hooks/usePageTracking";
 import Navigation from "@/components/Navigation";
 import { useAccueilBackgroundPhotos } from "@/hooks/useWeddingPhotos";
+import Galerie from './Galerie';
 const Index = () => {
   usePageTracking('accueil');
   const {
@@ -105,9 +106,49 @@ const Index = () => {
             <Link to="/hebergement">
               <Card className="group hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
                 <CardContent className="p-6 text-center">
-                  <Users className="mx-auto mb-4 text-accent group-hover:scale-110 transition-transform" size={32} />
+                  <Building2 className="mx-auto mb-4 text-accent group-hover:scale-110 transition-transform" size={32} />
                   <h3 className="font-title text-xl mb-2">Hébergement</h3>
                   <p className="font-body text-sm text-muted-foreground">Où séjourner à Assinie</p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link to="/infos">
+              <Card className="group hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <Info className="mx-auto mb-4 text-accent group-hover:scale-110 transition-transform" size={32} />
+                  <h3 className="font-title text-xl mb-2">Infos Pratiques</h3>
+                  <p className="font-body text-sm text-muted-foreground">Bon à savoir</p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link to="/cadeaux">
+              <Card className="group hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <Gift className="mx-auto mb-4 text-accent group-hover:scale-110 transition-transform" size={32} />
+                  <h3 className="font-title text-xl mb-2">Cadeaux</h3>
+                  <p className="font-body text-sm text-muted-foreground">Votre présence, est inestimable</p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link to="/galerie">
+              <Card className="group hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <Camera className="mx-auto mb-4 text-accent group-hover:scale-110 transition-transform" size={32} />
+                  <h3 className="font-title text-xl mb-2">Galerie</h3>
+                  <p className="font-body text-sm text-muted-foreground">Notre bonheur partagé</p>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link to="/contact">
+              <Card className="group hover:shadow-elegant transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+                <CardContent className="p-6 text-center">
+                  <Phone className="mx-auto mb-4 text-accent group-hover:scale-110 transition-transform" size={32} />
+                  <h3 className="font-title text-xl mb-2">Contacts</h3>
+                  <p className="font-body text-sm text-muted-foreground">Nous contacter</p>
                 </CardContent>
               </Card>
             </Link>
